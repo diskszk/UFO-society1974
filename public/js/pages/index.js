@@ -1,4 +1,5 @@
-export { default as Login } from './Login';
-export { default as Lyric } from './Lyric';
-export { default as SignUp } from './SignUp';
+export { default as LoginPage } from './LoginPage';
+export { default as AdminPage } from './AdminPage';
+export { default as LyricPage } from './LyricPage';
+export { default as SignupPage } from './SignUpPage';
 

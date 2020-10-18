@@ -1,4 +1,9 @@
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
  text-align: center;
  background-image: url("./images/nasa2.jpg");
  color: red;
@@ -83,9 +88,9 @@ table {
       #ddd 100%
     );
   background-size:100% 1em;
+  background-color: rgba(0,0,0,0);
   line-height:2;
   background-color: #eee;
-  /* min-width: 85vw; */
   margin: 0 auto;
   border-radius: 4px;
 }
@@ -106,7 +111,7 @@ table {
 .modal-inner {
   position: absolute;
   z-index: 1;
-  top: 0;
+  top: -5px;
   right: 5%;
   left: 5%;
   margin: auto;

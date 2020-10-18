@@ -1,5 +1,5 @@
 import React from 'react';
-import { Login, Lyric, SignUp } from './pages';
+import { LoginPage, AdminPage, LyricPage, SignupPage } from './pages';
 import { Route } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
@@ -16,9 +16,11 @@ const App = () => {
   // /develop.html#/loginでloginにアクセスできる・・・なぜ
   return (
     <>
-      <Route exact path={"/"} component={Lyric} />
-      <Route exact path={"/login"} component={Login} />
-      <Route exact path={"/signup"} component={SignUp} />
+      <Route exact path={"/"} component={LyricPage} />
+      <Route exact path={"/admin"} component={AdminPage} />
+
+      <Route exact path={"/login"} component={LoginPage} />
+      <Route exact path={"/signup"} component={SignupPage} />
     </>
   );
 }
