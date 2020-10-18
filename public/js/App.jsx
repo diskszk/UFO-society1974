@@ -1,8 +1,9 @@
 import React from 'react';
-import { LoginPage, AdminPage, LyricPage, SignupPage } from './pages';
+import { LoginPage, AdminPage, LyricPage, SignupPage, AddUser, EditUser, AddSong } from './pages';
 import { Route } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
+import EditSong from './pages/EditSong';
 
 const App = () => {
 
@@ -18,9 +19,12 @@ const App = () => {
     <>
       <Route exact path={"/"} component={LyricPage} />
       <Route exact path={"/admin"} component={AdminPage} />
-
       <Route exact path={"/login"} component={LoginPage} />
-      <Route exact path={"/signup"} component={SignupPage} />
+
+      <Route exact path={"/admin/add-user"} component={AddUser} />
+      <Route exact path={"/admin/edit-user"} component={EditUser} />
+      <Route exact path={"/admin/add-song"} component={AddSong} />
+      <Route exact path={"/admin/edit-song"} component={EditSong} />
     </>
   );
 }

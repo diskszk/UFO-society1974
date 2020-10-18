@@ -9,7 +9,6 @@ const SongsTable = (props) => {
         return (
           <tbody key={key}>
             <tr role="button" className="tr-song" id={key} onClick={() => props.hundleClick(song)}>
-            {/* <tr role="button" className="tr-song" onClick={props.hundleClick}> */}
               <td className="table-title">{song.id}. {song.titleJP}</td>
               <td>{song.story}</td>
             </tr>

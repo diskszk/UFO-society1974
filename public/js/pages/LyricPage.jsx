@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Note, SongsTable } from '../components/lyric';
 
 import { kite, young } from '../components/lyric/songData';
+import { compare } from '../helper/compare';
 
 const songs = [
   {
@@ -30,6 +31,7 @@ const LyricPage = () => {
 
   logPath();
 
+  const sortedSongs = songs.slice().sort(compare);
   const [isPreview, setIsPreview] = useState(false);
   const [displaySong, setDisplaySong] = useState({});
 
@@ -54,12 +56,12 @@ const LyricPage = () => {
           song={displaySong}
         />
       )}
-      {/* <Link to="/admin"><button>管理者ページ</button></Link> */}
       <p>coding...</p>
       <p><a href="./index.html">トップページ</a></p>
       <h1>歌詞の記録</h1>
+      <Link to="/admin"><button>管理者ページ</button></Link>
       <SongsTable
-        songs={songs}
+        songs={sortedSongs}
         hundleClick={hundleClick}
       />
     </article>

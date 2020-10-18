@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const SignupPage = () => {
+const AddUser = () => {
   const [email, setEmail] = useState(""),
     [password, setPassword] = useState(""),
     [confirmPassword, setConfirmPassword] = useState("");
@@ -20,9 +21,8 @@ const SignupPage = () => {
   }, [email])
 
   return (
-    <div className="sign-uo-container">
-      <p>管理者登録</p>
-      <br></br>
+    <div className="signup-container admin-page">
+      <h1>管理者登録</h1>
       <div className="input-list">
         <label htmlFor="email">e-mail </label>
         <input
@@ -56,12 +56,22 @@ const SignupPage = () => {
           placeholder="確認用を入力してください"
         />
       </div>
-      <div>
-        <button>登録する</button>
+      <div className="input-list">
+        <label htmlFor="selectRole">権限を選択してください</label>
+        <select id="selectRole">
+          <option value="editer">バンドメンバー</option>
+          <option value="addmin">最高権限</option>
+          <option value="viewer">テスト</option>
+        </select>
       </div>
-      <br></br>
+      <div>
+        <button className="btn">登録する</button>
+      </div>
+      <Link to="/admin">
+        <button>もどる</button>
+      </Link>
     </div>
   );
 }
 
-export default SignupPage;
+export default AddUser;

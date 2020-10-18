@@ -139,7 +139,7 @@ table {
 }
 
 /* Sign Up */
-.sign-uo-container{
+.signup-container{
   font-size: 1.5em;
 }
 .input-list {
@@ -150,9 +150,31 @@ table {
   text-align: center;
 }
 
-.input-list > input {
+.input-list > input, select {
   height: 2em;
   width: 240px;
   margin: 0 auto;
   margin-bottom: 3em;
+}
+.admin-page {
+  margin-bottom: 2em;
+}
+
+.admin-page h1 {
+  margin-top: .2em;
+}
+
+.admin-page button {
+  width: 13.5em;
+  height: 2.5em;
+  text-align: center;
+  border: 2px solid #333;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+  cursor: pointer;
+  margin: .25em .25em;
 }
